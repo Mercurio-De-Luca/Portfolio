@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit, OnDestroy  {
   destroy$: Subject<void> = new Subject<void>();
 
   ngOnInit() {
-    interval(3000)
+    interval(4000)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
         this.changeString()

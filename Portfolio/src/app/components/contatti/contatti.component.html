@@ -1,1 +1,52 @@
-<p>contatti works!</p>
+<div id="contatti" class="bg-zinc-800 text-white">
+  <div class="flex justify-center p-14">
+    <h2 class="text-2xl font-extrabold">Contattami</h2>
+  </div>
+  <div class="py-10 flex justify-center">
+    <div class="form-container bg-black">
+      <form class="form" #f="ngForm" (ngSubmit)="inviaEmail()">
+        <span class="heading">Scrivimi</span>
+        <label class="text-sm font-mono font-bold">Inserisci il tuo nome</label>
+        <input
+          placeholder="Name"
+          type="name"
+          class="input"
+          id="from_name"
+          name="from_name"
+          ngModel
+          required
+        />
+        <label class="text-sm font-mono font-bold"
+          >Inserisci la tua email</label
+        >
+        <input
+          placeholder="Email"
+          type="name"
+          class="input"
+          id="from_name"
+          name="from_name"
+          ngModel
+          required
+        />
+        <label class="text-sm font-mono font-bold"
+          >Inserisci un messaggio</label
+        >
+        <textarea
+          class="textarea"
+          placeholder="Hello"
+          rows="10"
+          cols="30"
+          id="message"
+          name="message"
+          ngModel
+          required
+        ></textarea>
+        <div class="button-container">
+          <div class="button-container w-full">
+            <button type="submit" class="button w-full">Invia</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
